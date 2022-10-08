@@ -1,0 +1,5 @@
+const express = require('express')
+const app = express()
+app.set('port', 3000)
+app.use(express.static(__dirname + '/docs'))
+app.listen(app.get('port'), () => { console.log('Server listening on port %s', app.get('port'))})
